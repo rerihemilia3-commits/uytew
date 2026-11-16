@@ -1,0 +1,23 @@
+
+name: Basic Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greeting-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greeting message
+        run: echo "Hello! My first GitHub Actions Workflow!"
+
+      - name: System information
+        run: |
+          echo "Workflow started successfully!"
+          echo "Operating System:"
+          uname -a
+          echo "Current directory:"
+          pwd
+          echo "Current date:"
+          date
